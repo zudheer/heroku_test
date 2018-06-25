@@ -1,0 +1,7 @@
+*.pyc
+*.log
+*.pid
+*.dump
+static/
+media/
+terms/local_settings.py
