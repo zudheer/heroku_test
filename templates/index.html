@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block nav%}
+<nav class="navbar{% block nav_class %} {% endblock nav_class %}">
+<div class="container">
+    <div class="navbar-header">
+        <span class=""></span>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'small.svg' %}" width="120"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            {% if request.user.is_anonymous %}
+            <li ><a href="{% url 'auth:login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+{% endblock %}
+{% block body %}
+<section class="container-fluid">
+    <h1>Welcome {{request.user}}</h1>
+</section>
+{% endblock body%}
