@@ -1,4 +1,4 @@
-certifi==2018.4.16
+certifi==2022.12.7
 Django==1.11.15
 pipenv==2018.6.25
 pytz==2018.4
